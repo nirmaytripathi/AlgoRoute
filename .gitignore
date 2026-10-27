@@ -1,0 +1,39 @@
+# Build files
+build/
+build-*/
+debug/
+release/
+
+# Compiled files
+*.exe
+*.dll
+*.o
+*.obj
+*.pdb
+
+# Qt Creator
+*.pro.user
+*.pro.user.*
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+
+# IDE files
+.vscode/
+.idea/
+
+# Temporary files
+*.log
+*.tmp
+*.bak
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini

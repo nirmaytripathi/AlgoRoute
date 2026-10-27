@@ -1,0 +1,145 @@
+[
+  {
+    "name": "Haldwani Railway Station",
+    "category": "Transit",
+    "lat": 29.21573,
+    "lon": 79.53343,
+    "description": "Railway station serving Haldwani.",
+    "nodeId": "919678360",
+    "snapDistanceMeters": 0,
+    "snappedLat": 29.21573,
+    "snappedLon": 79.53343
+  },
+  {
+    "name": "Kathgodam Railway Station",
+    "category": "Transit",
+    "lat": 29.26665,
+    "lon": 79.54664,
+    "description": "Railway station and terminal at Kathgodam.",
+    "nodeId": null,
+    "snapDistanceMeters": 0,
+    "snappedLat": 29.26665,
+    "snappedLon": 79.54664
+  },
+  {
+    "name": "Haldwani Bus Station",
+    "category": "Transit",
+    "lat": 29.21655,
+    "lon": 79.53027,
+    "description": "Haldwani bus station.",
+    "nodeId": null,
+    "snapDistanceMeters": 0,
+    "snappedLat": 29.21655,
+    "snappedLon": 79.53027
+  },
+  {
+    "name": "Mukhani Chouraha",
+    "category": "Intersection",
+    "lat": 29.2215952,
+    "lon": 79.5081892,
+    "description": "Mukhani junction area in Haldwani.",
+    "nodeId": null,
+    "snapDistanceMeters": null,
+    "snappedLat": null,
+    "snappedLon": null
+  },
+  {
+    "name": "Kaladhungi Road Junction",
+    "category": "Road",
+    "lat": 29.2194628,
+    "lon": 79.5120246,
+    "description": "Junction on the Kaladhungi Road corridor.",
+    "nodeId": null,
+    "snapDistanceMeters": null,
+    "snappedLat": null,
+    "snappedLon": null
+  },
+  {
+    "name": "Tikonia Chouraha",
+    "category": "Intersection",
+    "lat": 29.2246485,
+    "lon": 79.52652,
+    "description": "Junction in the Tikonia area of Haldwani.",
+    "nodeId": null,
+    "snapDistanceMeters": null,
+    "snappedLat": null,
+    "snappedLon": null
+  },
+  {
+    "name": "Rampur Road Junction",
+    "category": "Road",
+    "lat": 29.2086399,
+    "lon": 79.5171749,
+    "description": "Junction on the Rampur Road corridor.",
+    "nodeId": null,
+    "snapDistanceMeters": null,
+    "snappedLat": null,
+    "snappedLon": null
+  },
+  {
+    "name": "Bareilly Road Junction",
+    "category": "Road",
+    "lat": 29.2014401,
+    "lon": 79.5250431,
+    "description": "Junction on the Bareilly Road corridor.",
+    "nodeId": null,
+    "snapDistanceMeters": null,
+    "snappedLat": null,
+    "snappedLon": null
+  },
+  {
+    "name": "HMT Factory Area",
+    "category": "Industrial",
+    "lat": 29.2545802,
+    "lon": 79.5419779,
+    "description": "HMT factory area near Ranibagh.",
+    "nodeId": null,
+    "snapDistanceMeters": null,
+    "snappedLat": null,
+    "snappedLon": null
+  },
+  {
+    "name": "Government Medical College",
+    "category": "Education / Hospital",
+    "lat": 29.20432,
+    "lon": 79.52332,
+    "description": "Government Medical College, Haldwani.",
+    "nodeId": null,
+    "snapDistanceMeters": 0,
+    "snappedLat": 29.20432,
+    "snappedLon": 79.52332
+  },
+  {
+    "name": "Subhash Nagar",
+    "category": "Residential",
+    "lat": 29.2103095,
+    "lon": 79.5245267,
+    "description": "Subhash Nagar area of Haldwani.",
+    "nodeId": null,
+    "snapDistanceMeters": null,
+    "snappedLat": null,
+    "snappedLon": null
+  },
+  {
+    "name": "Nawabi Road Intersection",
+    "category": "Intersection",
+    "lat": 29.227076,
+    "lon": 79.52396,
+    "description": "Intersection in the Nawabi Road area of Haldwani.",
+    "nodeId": null,
+    "snapDistanceMeters": null,
+    "snappedLat": null,
+    "snappedLon": null
+  },
+  {
+    "name": "Damuadhunga",
+    "category": "Residential",
+    "lat": 29.25187,
+    "lon": 79.53884,
+    "description": "Damuadhunga locality near Haldwani.",
+    "nodeId": null,
+    "snapDistanceMeters": 0,
+    "snappedLat": 29.25187,
+    "snappedLon": 79.53884
+  }
+]

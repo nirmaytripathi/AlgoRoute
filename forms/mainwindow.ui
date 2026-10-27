@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>826</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AlgoRoute</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QMainWindow {
+    background-color: #090d16;
+    color: #f8fafc;
+    font-family: 'Outfit', 'Inter', 'Segoe UI', sans-serif;
+}
+QGroupBox {
+    background-color: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    margin-top: 12px;
+    font-weight: bold;
+    color: #38bdf8;
+    padding: 12px;
+}
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 14px;
+    padding: 0 6px;
+}
+QLabel {
+    color: #94a3b8;
+    font-size: 13px;
+}
+QLineEdit, QComboBox {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: #f8fafc;
+    font-size: 13px;
+}
+QLineEdit:focus, QComboBox:focus {
+    border: 1px solid #06b6d4;
+}
+QPushButton {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    color: #f8fafc;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 10px 16px;
+}
+QPushButton:hover {
+    background-color: #334155;
+    border-color: #06b6d4;
+}
+QPushButton#findRouteBtn {
+    background-color: #06b6d4;
+    color: #090d16;
+    border: none;
+    font-weight: bold;
+}
+QPushButton#findRouteBtn:hover {
+    background-color: #22d3ee;
+}
+QTabWidget::pane {
+    border: 1px solid #1e293b;
+    background-color: #090d16;
+    border-radius: 8px;
+}
+QTabBar::tab {
+    background-color: #0f172a;
+    color: #94a3b8;
+    padding: 10px 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    font-weight: bold;
+}
+QTabBar::tab:selected {
+    background-color: #1e293b;
+    color: #38bdf8;
+    border-bottom: 2px solid #06b6d4;
+}
+QTableWidget {
+    background-color: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    color: #f8fafc;
+    font-size: 13px;
+    gridline-color: #1e293b;
+}
+QHeaderView::section {
+    background-color: #1e293b;
+    color: #38bdf8;
+    padding: 8px;
+    font-weight: bold;
+    border: 1px solid #334155;
+}
+   </string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="mainLayout">
+    <property name="spacing">
+     <number>12</number>
+    </property>
+    <property name="leftMargin">
+     <number>12</number>
+    </property>
+    <property name="topMargin">
+     <number>12</number>
+    </property>
+    <property name="rightMargin">
+     <number>12</number>
+    </property>
+    <property name="bottomMargin">
+     <number>12</number>
+    </property>
+    <item>
+     <widget class="QWidget" name="sidebarWidget" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>380</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>380</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <layout class="QVBoxLayout" name="sidebarLayout">
+       <property name="spacing">
+        <number>12</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="titleLabel">
+         <property name="styleSheet">
+          <string notr="true">font-size: 20px; font-weight: bold; color: #f8fafc; margin-bottom: 4px;</string>
+         </property>
+         <property name="text">
+          <string>🚀 AlgoRoute</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="subtitleLabel">
+         <property name="styleSheet">
+          <string notr="true">color: #64748b; font-size: 12px; margin-bottom: 8px;</string>
+         </property>
+         <property name="text">
+          <string>Real-World Route Finding &amp; DSA Visualizer</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="locGroup">
+         <property name="title">
+          <string>📍 Location Setup</string>
+         </property>
+         <layout class="QVBoxLayout" name="locLayout">
+          <item>
+           <widget class="QLabel" name="startLabel">
+            <property name="text">
+             <string>Starting Landmark:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="startCombo"/>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="startEdit">
+            <property name="placeholderText">
+             <string>Click on map or pick landmark above...</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="swapBtn">
+            <property name="styleSheet">
+             <string notr="true">margin-top: 6px; margin-bottom: 6px; background-color: #1e293b; color: #38bdf8;</string>
+            </property>
+            <property name="text">
+             <string>🔄 Swap Start &amp; Destination</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="destLabel">
+            <property name="text">
+             <string>Destination Landmark:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="destCombo"/>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="destEdit">
+            <property name="placeholderText">
+             <string>Click on map or pick landmark above...</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="algoGroup">
+         <property name="title">
+          <string>⚡ Algorithm &amp; Execution Options</string>
+         </property>
+         <layout class="QVBoxLayout" name="algoLayout">
+          <item>
+           <widget class="QLabel" name="algoLabel">
+            <property name="text">
+             <string>Select Pathfinding Algorithm:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="algoCombo"/>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="speedHeaderLayout">
+            <item>
+             <widget class="QLabel" name="speedTitleLabel">
+              <property name="text">
+               <string>Animation Speed:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="speedLabel">
+              <property name="styleSheet">
+               <string notr="true">color: #06b6d4; font-weight: bold;</string>
+              </property>
+              <property name="text">
+               <string>5x</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QSlider" name="speedSlider">
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>10</number>
+            </property>
+            <property name="value">
+             <number>5</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="btnLayout">
+         <property name="spacing">
+          <number>8</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="findRouteBtn">
+           <property name="text">
+            <string>🚗 Find Optimal Route</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="visualizeBtn">
+           <property name="text">
+            <string>🎬 Visualize Search Step-by-Step</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="compareBtn">
+           <property name="text">
+            <string>📊 Compare Dijkstra vs A*</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="clearBtn">
+           <property name="text">
+            <string>🗑️ Clear Map &amp; Route</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="HaldwaniMapWidget" name="mapWidget">
+       <attribute name="title">
+        <string>🗺️ Interactive OpenStreetMap</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="benchmarkTab">
+       <attribute name="title">
+        <string>📊 Algorithm Performance Matrix</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="bmLayout">
+        <item>
+         <widget class="QTableWidget" name="benchmarkTable">
+          <column>
+           <property name="text">
+            <string>Algorithm</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Path Distance (km)</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Nodes Explored</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Execution Time (ms)</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Efficiency Gain</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>HaldwaniMapWidget</class>
+   <extends>QWidget</extends>
+   <header>mapwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
