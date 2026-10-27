@@ -29,6 +29,8 @@ add_executable(AlgoRoute
     ../forms/mainwindow.ui
 )
 
+target_include_directories(AlgoRoute PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+
 target_link_libraries(AlgoRoute PRIVATE
     Qt6::Core
     Qt6::Gui
