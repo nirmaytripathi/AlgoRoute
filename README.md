@@ -138,10 +138,10 @@ make                     # mingw32-make on Windows with MinGW
 
 | Member | Role | Responsibilities | Files / Areas |
 |:-------|:-----|:-----------------|:--------------|
-| **Member 1** *(Name, Roll No.)* | **Data & Graph Engineer** | Collect and clean the Haldwani OSM data. Build the graph (nodes, directed edges, Haversine weights). Verify the graph is fully connected. Define landmark presets. | `data/`, `graph.h/.cpp`, `datastructures.h`, `resources.qrc` |
-| **Member 2** *(Name, Roll No.)* | **Algorithm Developer** | Implement Dijkstra with `std::priority_queue`. Implement A\* with the Haversine heuristic. Return the path, distance and nodes-explored count. Prove or verify optimality. | `dijkstra.h/.cpp`, `astar.h/.cpp` |
-| **Member 3** *(Name, Roll No.)* | **GUI Developer** | Design the dark theme and the main window. Build the sidebar controls and tabs. Draw the map and route in the map widget. Wire the UI to the algorithms. | `mainwindow.h/.cpp`, `mapwidget.h/.cpp`, `forms/mainwindow.ui`, `main.cpp` |
-| **Member 4** *(Name, Roll No.)* | **Benchmarking, Testing & Documentation** | Build the benchmark table (distance, nodes, time). Test routes across many source/destination pairs. Maintain the CMake and qmake builds. Write the DSA Theory tab, `docs/` and this README. | Benchmark module, `CMakeLists.txt`, `AlgoRoute.pro`, `docs/`, `README.md` |
+| **Member 1** *Nirmay Tripathi* | **Data & Graph Engineer** | Collect and clean the Haldwani OSM data. Build the graph (nodes, directed edges, Haversine weights). Verify the graph is fully connected. Define landmark presets. | `data/`, `graph.h/.cpp`, `datastructures.h`, `resources.qrc` |
+| **Member 2** *Tushar Tiwari* | **Algorithm Developer** | Implement Dijkstra with `std::priority_queue`. Implement A\* with the Haversine heuristic. Return the path, distance and nodes-explored count. Prove or verify optimality. | `dijkstra.h/.cpp`, `astar.h/.cpp` |
+| **Member 3** *Suraj Pandey* | **GUI Developer** | Design the dark theme and the main window. Build the sidebar controls and tabs. Draw the map and route in the map widget. Wire the UI to the algorithms. | `mainwindow.h/.cpp`, `mapwidget.h/.cpp`, `forms/mainwindow.ui`, `main.cpp` |
+| **Member 4** *Vaibhav Bhatt* | **Benchmarking, Testing & Documentation** | Build the benchmark table (distance, nodes, time). Test routes across many source/destination pairs. Maintain the CMake and qmake builds. Write the DSA Theory tab, `docs/` and this README. | Benchmark module, `CMakeLists.txt`, `AlgoRoute.pro`, `docs/`, `README.md` |
 
 ### 🤝 Shared responsibilities
 
