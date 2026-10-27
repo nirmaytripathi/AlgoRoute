@@ -5,7 +5,7 @@
 [![DSA Project](https://img.shields.io/badge/Project-Data%20Structures%20%26%20Algorithms-indigo.svg)](#)
 [![Location](https://img.shields.io/badge/Location-Haldwani%2C%20Uttarakhand-emerald.svg)](#)
 
-**AlgoRoute** is a native C++ Desktop GUI Application built using **Qt 6** (`C:\Qt\6.11.1\mingw_64`) for **Haldwani, Uttarakhand, India**. It allows users to select locations across Haldwani and calculates the optimal shortest route using custom **Dijkstra's Algorithm** and **A* Algorithm** operating on real-world OpenStreetMap (OSM) road network data.
+**AlgoRoute** is a native C++ Desktop GUI Application built using **Qt 6** for **Haldwani, Uttarakhand, India**. It allows users to select locations across Haldwani and calculates the optimal shortest route using custom **Dijkstra's Algorithm** and **A* Algorithm** operating on real-world OpenStreetMap (OSM) road network data.
 
 ---
 
@@ -34,43 +34,46 @@
 ## 📁 Project Directory Structure
 
 ```
-D:\AlgoRoute\
-├── AlgoRoute.exe              # Native Compiled Qt 6 C++ Desktop Application
-├── build_qt.bat               # Compilation script using qmake and mingw32-make
+AlgoRoute/
 ├── src/
-│   ├── main.cpp               # Qt Application entry point
-│   ├── mainwindow.h & cpp     # Qt MainWindow GUI implementation & dark QSS stylesheet
-│   ├── graph.h & cpp          # C++ Graph class, JSON loader & Haversine formula
-│   ├── dijkstra.h & cpp       # C++ Dijkstra's algorithm (std::priority_queue)
-│   ├── astar.h & cpp          # C++ A* algorithm (Haversine heuristic)
-│   ├── map_view.html          # Embedded HTML map canvas
-│   ├── AlgoRoute.pro          # Qt Qmake Project File
-│   └── CMakeLists.txt         # CMake Build File
-├── data/
-│   ├── haldwani_graph.json    # Real Haldwani OSM road network graph (6,816 nodes, 12,571 edges)
-│   └── preset_locations.json  # Haldwani landmark dictionary
+│   ├── main.cpp, mainwindow.h/.cpp, mapwidget.h/.cpp
+│   ├── graph.h/.cpp, dijkstra.h/.cpp, astar.h/.cpp, datastructures.h
+│   ├── resources.qrc          # Embeds the JSON data inside the executable
+│   ├── AlgoRoute.pro          # qmake project
+│   └── CMakeLists.txt         # CMake project
+├── forms/mainwindow.ui
+├── data/                      # Haldwani OSM graph + landmark presets
 ├── docs/
-│   ├── ARCHITECTURE.md        # Qt 6 Desktop Architecture specification
-│   ├── ALGORITHMS.md          # Mathematical breakdown of Dijkstra vs A*
-│   └── TEST_CASES.md          # Verified Haldwani test suite
-└── README.md                  # Project documentation
+└── README.md
 ```
 
 ---
 
-## 🚀 How to Run & Build
+## 🚀 Requirements
 
-### 1. Launching the Compiled Application
-Double-click `D:\AlgoRoute\AlgoRoute.exe` or run from PowerShell:
-```powershell
-D:\AlgoRoute\AlgoRoute.exe
+- **Qt 6** (Widgets, Svg, Network modules) installed, 6.2 or newer
+- A C++17 compiler (MinGW / MSVC / GCC / Clang)
+- Internet connection (map tiles are downloaded at runtime)
+
+Works on Windows, Linux and macOS. The road-network data is embedded in the executable, so no data paths need configuring.
+
+## 🔨 Build & Run
+
+### Option A: Qt Creator (easiest)
+Open `src/CMakeLists.txt` (or `src/AlgoRoute.pro`), pick your Qt 6 kit, press **Run**.
+
+### Option B: Command line (CMake)
+```bash
+cmake -S src -B build -DCMAKE_PREFIX_PATH=/path/to/Qt/6.x.x/<compiler>
+cmake --build build
+./build/AlgoRoute        # build\AlgoRoute.exe on Windows
 ```
 
-### 2. Compiling from Source
-Run the included build script in Command Prompt / PowerShell:
-```cmd
-cd D:\AlgoRoute
-build_qt.bat
+### Option C: Command line (qmake)
+```bash
+cd src
+qmake AlgoRoute.pro
+make            # mingw32-make on Windows with MinGW
 ```
 
 ---

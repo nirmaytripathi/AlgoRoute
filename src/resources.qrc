@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="data/haldwani_graph.json">../data/haldwani_graph.json</file>
+        <file alias="data/preset_locations.json">../data/preset_locations.json</file>
+    </qresource>
+</RCC>

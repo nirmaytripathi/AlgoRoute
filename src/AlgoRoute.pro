@@ -5,12 +5,6 @@ CONFIG += c++17
 TARGET = AlgoRoute
 TEMPLATE = app
 
-DESTDIR = ../
-
-# Fix Qt Creator unescaped backslash qmake path in Makefile line 317
-win32 {
-    QMAKE_QMAKE = C:/Qt/6.11.1/mingw_64/bin/qmake.exe
-}
 
 HEADERS += \
     datastructures.h \
@@ -30,3 +24,6 @@ SOURCES += \
 
 FORMS += \
     ../forms/mainwindow.ui
+
+RESOURCES += \
+    resources.qrc

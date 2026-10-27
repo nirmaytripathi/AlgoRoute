@@ -27,7 +27,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->benchmarkTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 
     // Load Graph & Presets
-    if (m_graph.loadFromJSON("D:/AlgoRoute/data/haldwani_graph.json")) {
+    if (m_graph.loadFromJSON(":/data/haldwani_graph.json")) {
         ui->mapWidget->setGraph(&m_graph);
     }
     loadPresets();
@@ -55,7 +55,7 @@ MainWindow::~MainWindow() {
 }
 
 void MainWindow::loadPresets() {
-    QFile file("D:/AlgoRoute/data/preset_locations.json");
+    QFile file(":/data/preset_locations.json");
     if (!file.open(QIODevice::ReadOnly)) return;
 
     QByteArray data = file.readAll();

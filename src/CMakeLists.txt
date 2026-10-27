@@ -24,6 +24,7 @@ add_executable(AlgoRoute
     astar.cpp
     astar.h
     datastructures.h
+    resources.qrc
     ../forms/mainwindow.ui
 )
 
@@ -36,5 +37,5 @@ target_link_libraries(AlgoRoute PRIVATE
 )
 
 set_target_properties(AlgoRoute PROPERTIES
-    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/.."
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}"
 )

@@ -37,3 +37,6 @@ compile_commands.json
 .DS_Store
 Thumbs.db
 desktop.ini
+# qmake generated
+Makefile*
+.qmake.stash
